@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <title>W3.CSS Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/nova.jpg'); /* Ruta de imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .welcome-message {
+            display: none;
+        }
+    </style>
+</head>
+<body class="w3-grey">
+    <div class="container w3-container">
+        <div id="welcome-section" class="welcome-message">
+            <h2>Bienvenido, <span id="nickname-display"></span>!</h2>
+            <button class="w3-button w3-red" onclick="logout()">Desconectar</button>
+        </div>
+        <div id="login-section">
+            <h3>Login</h3>
+            <form id="loginForm" onsubmit="return login()">
+                <div class="w3-section">
+                    <label for="nickname"><b>nickname</b></label>
+                    <input class="w3-input w3-border" type="text" id="nickname" placeholder="Ingresa tu nickname" required>
+                </div>
+                <button class="w3-button w3-black" type="submit">Conectar</button>
+            </form>
+        </div>
+    </div>
+    <script src="script/login.js"></script>
+    <script src="script/catalogo.js"></script>
+    <script src="script/carrito.js"></script>
+</body>
+</html>
+
+                            
+    <style>
+      .product-container {
+          position: relative;
+      }
+      .add-to-cart-btn {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          background-color: #000;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+      }
+    </style>
+   
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>IL </b>INACAPLudi</a>
+       
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">Ligas y torneos</a>
+          <a href="#about" class="w3-bar-item w3-button">wargames</a>
+          <a href="#contact" class="w3-bar-item w3-button">preventas</a>
+        </div>
+      </div>
+    </div>
+    <div class="catalogo">
+      <h2>Catálogo de Productos</h2>
+      <div id="catalogo">
+          <!-- Aquí se mostrarán los productos del catálogo -->
+      </div>
+  </div>
+  <style>
+  body{
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+  }
+
+  #catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+  }
+
+  .producto {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+      max-width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+  }
+
+  .producto:hover {
+      transform: scale(1.05);
+  }
+
+  .producto img {
+      border-radius: 10px;
+      max-width: 100%;
+  }
+
+  .producto h3 {
+      color: #333;
+      font-size: 1.5em;
+      margin: 10px 0;
+  }
+
+  .producto p {
+      color: #666;
+      font-size: 1em;
+      margin: 10px 0;
+  }
+
+  .producto p strong {
+      color: #333;
+  }
+
+  .producto button {
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 10px;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+  }
+
+  .producto button:hover {
+      background-color: #0056b3;
+  }
+
+  #carrito {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #000000; /* Borde rojo */
+    padding: 20px;
+    border-radius: 100px;
+    max-width: 800px; /* Ancho */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(58, 65, 206, 0.2); /* Sombra con color black */
+}
+
+.item-carrito {
+    background-color: #e9ecef;
+    border: 1px solid #223ac5; /* Borde rojo */
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); /* Sombra con color rojo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  .item-carrito p {
+      margin: 1px 0;
+  }
+
+  .item-carrito button {
+      background-color: #4335dc;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      padding: 5px 10px;
+      transition: background-color 0.3s;
+  }
+
+  .item-carrito button:hover {
+      background-color: #c31e21;
+  }
+  #total-carrito {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: right;
+  }
+  </style>
+  <title>Carrito de Compras</title>
+  <style>
+      .catalogo {
+          float: left;
+          width: 50%;
+          padding: 20px;
+      }
+
+      .carrito {
+          float: right;
+          width: 50%;
+          padding: 20px;
+      }
+
+      .producto {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+
+      .item-carrito {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+  </style>
+  <div class="carrito">
+      <h2>Carrito de Compras</h2>
+      <div id="carrito">  <!-- Aquí se mostrará el contenido del carrito -->
+      </div>
+         
+  </div>
+
+  <script src="script/catalogo.js"></script>
+  <script src="script/carrito.js"></script>
+    <div id="carrito-section" class="w3-container w3-padding">
+
+   
+
+   
+      <!-- About Section -->
+
+    <div class="w3-container w3-padding-32" id="about">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Acerca de</h3>
+      <p>En INACAPLudi, nos dedicamos a llevar la emoción de los juegos de mesa a tu hogar. Con una amplia selección que abarca desde los clásicos hasta los más innovadores, estamos aquí para ser tu destino número uno para la diversión en la mesa.
+      </p>
+    </div>
+
+   
+
+    <footer class="w3-center w3-black w3-padding-16">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+   
+  </body>
+</head>
+</html>
